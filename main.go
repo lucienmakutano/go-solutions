@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/tadomikikuto-bit/go-solutions/roman_num_dec"
+	"github.com/tadomikikuto-bit/go-solutions/roman_num_decoder"
 )
 
 func main(){
-	dec := roman_num_dec.Decode("XXI")
+	dec := Decode("XXI")
 	fmt.Println(dec)
 }
