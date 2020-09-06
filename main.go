@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/tadomikikuto-bit/roman_num_dec"
+	"github.com/tadomikikuto-bit/go-solutions/roman_num_dec"
 )
 
 func main(){
