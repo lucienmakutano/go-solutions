@@ -6,6 +6,6 @@ import (
 )
 
 func main(){
-	dec := Decode("XXI")
+	dec := roman_num_decoder.Decode("XXI")
 	fmt.Println(dec)
 }
