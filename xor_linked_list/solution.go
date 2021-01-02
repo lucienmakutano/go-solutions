@@ -9,19 +9,42 @@ type XORLinkedList struct {
 
 // Add adds an element to the list
 func (xor *XORLinkedList) Add(el int) {
-	var newNode *XORLinkedList = &XORLinkedList{}
-
 	if xor.Prev.El == 0 {
 		xor.El = el
-		xor.Next = newNode
+		xor.Next = &XORLinkedList{}
+		xor.Prev = &XORLinkedList{El: -1}
 		return
 	}
 
-	newNode.El = el
-	newNode.Prev = xor
-	xor.Next = newNode
-	newNode.Next = &XORLinkedList{}
+	var newNode *XORLinkedList = &XORLinkedList{}
+
+	for xor.El != 0 {
+		// currNode := xor
+
+		if xor.Next.El == 0 {
+			newNode.El = el
+			newNode.Prev = xor
+			xor.Next = newNode
+			newNode.Next = &XORLinkedList{}
+		}
+
+		xor = xor.Next
+	}
 }
 
 // Get retrieves an element fro the list based on a index
-func (xor *XORLinkedList) Get(idx int) {}
+func (xor *XORLinkedList) Get(idx int) *XORLinkedList {
+	counter := 0
+
+	for xor.El != 0 {
+
+		if counter == idx {
+			return xor
+		}
+
+		counter++
+		xor = xor.Next
+	}
+
+	return &XORLinkedList{}
+}

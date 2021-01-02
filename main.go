@@ -13,5 +13,5 @@ func main() {
 	palyndrom := vpwr.ValidPalyndromWithRemoval("aba")
 	var xorll *xll.XORLinkedList = &xll.XORLinkedList{}
 
-	fmt.Printf("%v \n%v", dec, palyndrom)
+	fmt.Printf("%v \n%v \n%v", dec, palyndrom, xorll)
 }
