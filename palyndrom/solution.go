@@ -1,15 +1,14 @@
-package valid_palyndrom_with_removal
+package palyndrom
 
 // ValidPalyndromWithRemoval creates a palyndrom by removing one char
 func ValidPalyndromWithRemoval(str string) bool {
 
-	palyndrom := false
 	length := len(str)
 
 	if length == 0 {
-		return palyndrom
+		return false
 	} else if str[0] != str[length-1] {
-		return palyndrom
+		return false
 	}
 
 	head := 0
@@ -25,7 +24,5 @@ func ValidPalyndromWithRemoval(str string) bool {
 		tail--
 	}
 
-	palyndrom = true
-
-	return palyndrom
+	return true
 }
